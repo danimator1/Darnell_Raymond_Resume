@@ -1,4 +1,4 @@
-/* Reset some default browser styles */
+/* General Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +7,9 @@
 
 /* Set default body styles */
 body {
-    font-family: 'Helvetica Neue', sans-serif; /* Consistent font family */
+    font-family: 'Helvetica Neue', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; /* Match portfolio background */
+    background-color: #f0f0f0;
     color: #333;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Match portfolio shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -36,8 +36,8 @@ body {
 .header {
     text-align: center;
     padding: 20px;
-    background-color: #0e0e0e; /* Match portfolio header background */
-    color: white; /* Match portfolio text color */
+    background-color: #0e0e0e;
+    color: white;
     border-radius: 10px 10px 0 0;
     width: 100%;
     margin-bottom: 20px;
@@ -54,7 +54,7 @@ body {
 }
 
 .contact-info a {
-    color: #ff6347; /* Match portfolio link color */
+    color: #ff6347;
     text-decoration: none;
 }
 
@@ -64,7 +64,7 @@ body {
 
 /* Section titles */
 .section-title {
-    background: #0e0e0e; /* Match portfolio section background */
+    background: #0e0e0e;
     color: white;
     padding: 10px;
     margin-bottom: 20px;
@@ -78,7 +78,7 @@ body {
 h3 {
     font-size: 1.2em;
     margin-top: 20px;
-    color: #ff6347; /* Match portfolio subsection color */
+    color: #ff6347;
 }
 
 /* Skills Grid Styling */
@@ -96,7 +96,7 @@ h3 {
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Match portfolio shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .skills-grid-item ul {
@@ -118,7 +118,7 @@ p {
 pre, code {
     background: #f4f4f4;
     padding: 10px;
-    border-left: 5px solid #ff6347; /* Match portfolio code border color */
+    border-left: 5px solid #ff6347;
     display: block;
     margin: 20px 0;
     white-space: pre-wrap;
@@ -129,7 +129,7 @@ pre, code {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #0e0e0e; /* Match portfolio footer background */
+    background-color: #0e0e0e;
     color: #777;
     margin-top: 20px;
     border-radius: 0 0 10px 10px;
@@ -150,7 +150,7 @@ footer {
 /* Sidebar Styling */
 nav.sidebar {
     width: 200px;
-    background-color: #0e0e0e; /* Match portfolio sidebar background */
+    background-color: #0e0e0e;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -180,19 +180,19 @@ nav.sidebar ul li a:hover {
 
 /* Sidebar styling */
 .sidebar {
-    width: 200px; /* Adjust as needed */
-    background: #333; /* Or any color that fits your design */
+    width: 200px;
+    background: #333;
     color: white;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh; /* Full height to ensure it takes up the full viewport height */
+    height: 100vh;
 }
 
 /* Sidebar links */
 .sidebar ul {
-    flex-grow: 1; /* Allow the list to take up available space */
+    flex-grow: 1;
     padding: 0;
 }
 
@@ -211,18 +211,50 @@ nav.sidebar ul li a:hover {
 
 /* Logo styling */
 .sidebar-logo {
-    width: 70%; /* Adjust as needed */
-    margin-top: auto; /* Pushes the logo to the bottom */
+    width: 70%;
+    margin-top: auto;
 }
 
-
 main {
-    margin-left: 220px; /* Adjust according to sidebar width */
+    margin-left: 220px;
     padding: 20px;
 }
 
+/* Top Navbar Styling (Hidden by default) */
+.top-navbar {
+    display: none;
+}
 
 /* Media queries for responsiveness */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2.2em;
+    }
+
+    .section-title {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    nav.sidebar {
+        width: 180px;
+    }
+
+    main {
+        margin-left: 200px;
+    }
+}
+
+/* Large phones and small tablets */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
@@ -237,7 +269,97 @@ main {
     }
 
     h3 {
-        font-size: 1.1em;
+        font-size: 1em;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav.sidebar {
+        display: none; /* Hide the sidebar */
+    }
+
+    /* Top Navbar Styling */
+    .top-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #0e0e0e;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    /* Top Navbar Logo Styling */
+    .top-navbar .sidebar-logo {
+        width: 40%; /* Adjust the size of the logo */
+        max-width: 120px; /* Optional: set a maximum width for the logo */
+        height: auto;
+        margin-left: auto; /* Optional: centers the logo if you need space on both sides */
+        margin-right: auto; /* Optional: centers the logo if you need space on both sides */
+    }
+
+    /* Top Navbar Links Styling */
+    .top-navbar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 1;
+    }
+
+    .top-navbar ul li {
+        margin: 0;
+    }
+
+    .top-navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px; /* Adjust font size for better readability on small screens */
+    }
+
+    .top-navbar ul li a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        margin-top: 60px; /* Adjust according to the height of the top navbar */
     }
 }
 
+/* Small phones */
+@media (max-width: 480px) {
+    body {
+        padding-top: 10vh; /* Adjust the percentage as needed */
+    }
+
+    .header {
+        padding-top: 10px; /* Adjust if needed */
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+    }
+
+    .skills-grid-item {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    pre, code {
+        font-size: 0.9em;
+    }
+
+    .contact-info {
+        font-size: 14px;
+    }
+}
