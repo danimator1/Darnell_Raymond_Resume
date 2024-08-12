@@ -7,9 +7,9 @@
 
 /* Set default body styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif; /* Consistent font family */
     line-height: 1.6;
-    background-color: #f4f4f9;
+    background-color: #f0f0f0; /* Match portfolio background */
     color: #333;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     background: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Match portfolio shadow */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -36,8 +36,8 @@ body {
 .header {
     text-align: center;
     padding: 20px;
-    background-color: #f8f9fa; /* Light background color for the header */
-    color: black;
+    background-color: #0e0e0e; /* Match portfolio header background */
+    color: white; /* Match portfolio text color */
     border-radius: 10px 10px 0 0;
     width: 100%;
     margin-bottom: 20px;
@@ -54,7 +54,7 @@ body {
 }
 
 .contact-info a {
-    color: #007bff; /* Blue color for links */
+    color: #ff6347; /* Match portfolio link color */
     text-decoration: none;
 }
 
@@ -64,7 +64,7 @@ body {
 
 /* Section titles */
 .section-title {
-    background: #007bff;
+    background: #0e0e0e; /* Match portfolio section background */
     color: white;
     padding: 10px;
     margin-bottom: 20px;
@@ -78,7 +78,7 @@ body {
 h3 {
     font-size: 1.2em;
     margin-top: 20px;
-    color: #007bff;
+    color: #ff6347; /* Match portfolio subsection color */
 }
 
 /* Skills Grid Styling */
@@ -96,7 +96,7 @@ h3 {
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Match portfolio shadow */
 }
 
 .skills-grid-item ul {
@@ -118,7 +118,7 @@ p {
 pre, code {
     background: #f4f4f4;
     padding: 10px;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid #ff6347; /* Match portfolio code border color */
     display: block;
     margin: 20px 0;
     white-space: pre-wrap;
@@ -129,8 +129,8 @@ pre, code {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #007bff; /* Blue background color */
-    color: white;
+    background-color: #0e0e0e; /* Match portfolio footer background */
+    color: #777;
     margin-top: 20px;
     border-radius: 0 0 10px 10px;
     width: 100%;
@@ -147,31 +147,10 @@ footer {
     margin: 10px 0;
 }
 
-
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    .header h1 {
-        font-size: 2em;
-    }
-
-    .section-title {
-        font-size: 1.3em;
-    }
-
-    h3 {
-        font-size: 1.1em;
-    }
-}
-
 /* Sidebar Styling */
 nav.sidebar {
     width: 200px;
-    background-color: #007bff; /* Blue background color */
+    background-color: #0e0e0e; /* Match portfolio sidebar background */
     padding: 20px;
     position: fixed;
     top: 0;
@@ -199,7 +178,66 @@ nav.sidebar ul li a:hover {
     text-decoration: underline;
 }
 
+/* Sidebar styling */
+.sidebar {
+    width: 200px; /* Adjust as needed */
+    background: #333; /* Or any color that fits your design */
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Full height to ensure it takes up the full viewport height */
+}
+
+/* Sidebar links */
+.sidebar ul {
+    flex-grow: 1; /* Allow the list to take up available space */
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Logo styling */
+.sidebar-logo {
+    width: 70%; /* Adjust as needed */
+    margin-top: auto; /* Pushes the logo to the bottom */
+}
+
+
 main {
     margin-left: 220px; /* Adjust according to sidebar width */
     padding: 20px;
 }
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+}
+
